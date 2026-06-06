@@ -23,8 +23,9 @@ This is the Vite React migration workspace for moving EWRS from Angular to React
 - Typed app config loader added to centralize and validate public `VITE_*` runtime config before auth/API work.
 - MSAL browser config helpers added for the centralized public app config, preserving redirect auth, local storage cache, Graph `user.read`, and EWRS API scope requests.
 - MSAL React provider wiring added through `src/app/AppProviders.tsx` so app-wide providers stay centralized.
+- Generic API client foundation added with API base URL validation, MSAL/e2e bearer token injection, and safe non-2xx errors.
 
-Not implemented yet: routing, API client, generated API types, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
+Not implemented yet: routing, generated API types, feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
 ## Environment Files
 
