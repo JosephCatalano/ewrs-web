@@ -16,8 +16,10 @@ This is the Vite React scaffold for migrating EWRS from Angular to React.
 - Husky pre-commit hook added to run lint-staged.
 - Vitest and React Testing Library installed with a scaffold smoke test.
 - Playwright installed with a scaffold e2e smoke test.
+- Storybook (React/Vite) scaffolded: shared `preview.tsx` loads the app root CSS, an `App` story exists with play assertions, and `npm run build-storybook` is verified.
+- Angular-equivalent npm script names are present for CI placeholders: `lint`, `test`, `e2e`, `storybook`, `build-storybook`, and build modes.
 
-Not implemented yet: routing, MSAL auth, API client, generated API types, Storybook, shared environment mode files, static docs/assets migration, and CI pipeline updates.
+Not implemented yet: routing, MSAL auth, API client, generated API types, shared environment mode files, static docs/assets migration, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
 ## Environment Files
 
@@ -68,6 +70,8 @@ npm.cmd run build:dev
 npm.cmd run build:uat
 npm.cmd run build:prod
 npm.cmd run preview
+npm.cmd run storybook
+npm.cmd run build-storybook
 ```
 
 ## Verification
@@ -80,6 +84,7 @@ npm.cmd run lint
 npm.cmd run test
 npm.cmd run e2e
 npm.cmd run build
+npm.cmd run build-storybook
 ```
 
 ## Migration Source Of Truth
