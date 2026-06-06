@@ -24,8 +24,9 @@ This is the Vite React migration workspace for moving EWRS from Angular to React
 - MSAL browser config helpers added for the centralized public app config, preserving redirect auth, local storage cache, Graph `user.read`, and EWRS API scope requests.
 - MSAL React provider wiring added through `src/app/AppProviders.tsx` so app-wide providers stay centralized.
 - Generic API client foundation added with API base URL validation, MSAL/e2e bearer token injection, and safe non-2xx errors.
+- OpenAPI type generation configured with `@hey-api/openapi-ts`; generated types live under `src/api/generated`.
 
-Not implemented yet: routing, generated API types, feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
+Not implemented yet: routing, feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
 ## Environment Files
 
@@ -80,7 +81,24 @@ npm.cmd run build:prod
 npm.cmd run preview
 npm.cmd run storybook
 npm.cmd run build-storybook
+npm.cmd run generate:api-types
 ```
+
+## API Types
+
+Generate API types from the approved local Swagger source:
+
+```powershell
+npm.cmd run generate:api-types
+```
+
+The generated files are written to:
+
+```text
+src/api/generated/
+```
+
+Do not manually edit generated API files. Regenerate them from Swagger instead. Generated files are excluded from formatting and linting so generator output stays intact.
 
 ## Verification
 

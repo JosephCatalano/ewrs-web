@@ -2,6 +2,7 @@ node_modules
 dist
 dist-ssr
 package-lock.json
+src/api/generated
 public/assets
 public/docs
 public/web.config

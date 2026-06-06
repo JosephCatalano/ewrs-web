@@ -13,6 +13,7 @@ export default defineConfig([
     'storybook-static',
     'playwright-report',
     'test-results',
+    'src/api/generated',
   ]),
   {
     files: ['**/*.{ts,tsx}'],

@@ -19,7 +19,8 @@
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate:api-types": "openapi-ts -f openapi-ts.config.ts"
   },
   "dependencies": {
     "@azure/msal-browser": "^5.12.0",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^5.2.1",
     "@eslint/js": "^10.0.1",
+    "@hey-api/openapi-ts": "^0.97.3",
     "@playwright/test": "^1.60.0",
     "@storybook/addon-mcp": "^0.6.0",
     "@storybook/addon-vitest": "^10.4.2",
