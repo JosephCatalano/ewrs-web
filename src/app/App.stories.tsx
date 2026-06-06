@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   play: async ({ canvas }) => {
     await expect(
-      canvas.getByRole('main', { name: /scaffold ready/i }),
+      canvas.getByRole('main', { name: /react shell ready/i }),
     ).toBeVisible()
   },
 }
@@ -26,7 +26,7 @@ export const CssCheck: Story = {
   play: async ({ canvas }) => {
     const heading = canvas.getByRole('heading', {
       level: 1,
-      name: /scaffold ready/i,
+      name: /react shell ready/i,
     })
 
     await expect(getComputedStyle(heading).boxSizing).toBe('border-box')
