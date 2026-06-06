@@ -20,6 +20,7 @@ This is the Vite React scaffold for migrating EWRS from Angular to React.
 - Angular-equivalent npm script names are present for CI placeholders: `lint`, `test`, `e2e`, `storybook`, `build-storybook`, and build modes.
 - Shared environment mode files added for public browser config: `.env.development`, `.env.uat`, and `.env.production`.
 - Static docs, assets, and IIS `web.config` copied into Vite `public/` and verified in `dist/`.
+- Typed app config loader added to centralize and validate public `VITE_*` runtime config before auth/API work.
 
 Not implemented yet: routing, MSAL auth, API client, generated API types, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
