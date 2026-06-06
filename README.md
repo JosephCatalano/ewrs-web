@@ -18,8 +18,9 @@ This is the Vite React scaffold for migrating EWRS from Angular to React.
 - Playwright installed with a scaffold e2e smoke test.
 - Storybook (React/Vite) scaffolded: shared `preview.tsx` loads the app root CSS, an `App` story exists with play assertions, and `npm run build-storybook` is verified.
 - Angular-equivalent npm script names are present for CI placeholders: `lint`, `test`, `e2e`, `storybook`, `build-storybook`, and build modes.
+- Shared environment mode files added for public browser config: `.env.development`, `.env.uat`, and `.env.production`.
 
-Not implemented yet: routing, MSAL auth, API client, generated API types, shared environment mode files, static docs/assets migration, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
+Not implemented yet: routing, MSAL auth, API client, generated API types, static docs/assets migration, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
 ## Environment Files
 
@@ -29,13 +30,15 @@ Use `.env.example` as the committed contract for required variables.
 
 Use `.env.local` for local machine overrides. It should stay uncommitted.
 
-Later shared environment files can be added as needed:
+Shared environment files exist for environment-specific public browser config:
 
 ```text
 .env.development
 .env.uat
 .env.production
 ```
+
+Do not put real e2e tokens in shared env files. Keep those in local-only e2e env files or pipeline secrets.
 
 ## Local Development
 
