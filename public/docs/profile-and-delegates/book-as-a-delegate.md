@@ -6,13 +6,13 @@ If one of your colleagues has made you their delegate, you can book a workspace 
 
 Confirm with the employee that they assigned you as a delegate in EWRS. Then confirm the booking details.
 
-| Detail      | Required |
-| ----------- | -------- |
-| Location    | Yes      |
-| Floor(s)    | Yes      |
-| Time Period | Yes      |
-| Start Date  | Yes      |
-| End Date    | No       |
+| Detail | Required |
+| --- | --- |
+| Location | Yes |
+| Floor(s) | Yes |
+| Time Period | Yes |
+| Start Date | Yes |
+| End Date | No |
 
 > **Note:** You will only be able to search for employees who have made you their delegate.
 

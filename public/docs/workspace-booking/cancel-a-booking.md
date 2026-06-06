@@ -23,10 +23,10 @@ Bookings can be cancelled at any time.
 
 ## After cancellation
 
-| Item               | Action                                                         |
-| ------------------ | -------------------------------------------------------------- |
-| EWRS booking       | Cancelled in EWRS                                              |
-| Calendar event     | Automatically updated to show "[CANCELLED]" in the event title |
-| Confirmation email | Keep as confirmation that the workspace was released           |
+| Item | Action |
+| --- | --- |
+| EWRS booking | Cancelled in EWRS |
+| Calendar event | Automatically updated to show "[CANCELLED]" in the event title |
+| Confirmation email | Keep as confirmation that the workspace was released |
 
 > **Note:** Your Outlook calendar event is automatically updated when you cancel a booking in EWRS. The event title will be updated to include "[CANCELLED]", so your calendar stays in sync with EWRS without manual updates.

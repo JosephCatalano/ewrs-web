@@ -15,7 +15,7 @@ Use **Manage Divisions** to look up division and division administrative informa
 
 ## Search options
 
-| Search by     | Result                                           |
-| ------------- | ------------------------------------------------ |
+| Search by | Result |
+| --- | --- |
 | Ministry name | Shows matching ministry and division information |
-| Division name | Shows matching division information              |
+| Division name | Shows matching division information |

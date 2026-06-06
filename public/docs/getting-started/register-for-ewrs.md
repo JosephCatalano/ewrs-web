@@ -26,9 +26,9 @@ Register the first time you access EWRS so the system can associate your profile
 
 ## Registration fields
 
-| Field             | Required | Details                              |
-| ----------------- | -------- | ------------------------------------ |
-| Reporting Manager | Yes      | Select from the drop-down list       |
-| Division          | Yes      | Select from the drop-down list       |
-| Delegates         | No       | Add up to five delegates             |
-| Declaration       | Yes      | Must be accepted before registration |
+| Field | Required | Details |
+| --- | --- | --- |
+| Reporting Manager | Yes | Select from the drop-down list |
+| Division | Yes | Select from the drop-down list |
+| Delegates | No | Add up to five delegates |
+| Declaration | Yes | Must be accepted before registration |

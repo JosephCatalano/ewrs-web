@@ -22,6 +22,6 @@ A delegate is a person who can book a workspace on behalf of an employee.
 
 ## Delegate limit
 
-| Rule              | Limit |
-| ----------------- | ----- |
-| Maximum delegates | 5     |
+| Rule | Limit |
+| --- | --- |
+| Maximum delegates | 5 |

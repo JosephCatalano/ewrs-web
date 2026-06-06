@@ -23,11 +23,11 @@ Use **Edit Account** to update your reporting manager, division, delegates, and 
 
 ## Profile fields
 
-| Field             | Required | Details                 |
-| ----------------- | -------- | ----------------------- |
-| Reporting Manager | Yes      | Select your manager     |
-| Division          | Yes      | Select your division    |
-| Delegates         | No       | Add or remove delegates |
+| Field | Required | Details |
+| --- | --- | --- |
+| Reporting Manager | Yes | Select your manager |
+| Division | Yes | Select your division |
+| Delegates | No | Add or remove delegates |
 
 > **Note:** Fields marked with an asterisk are mandatory.
 

@@ -21,11 +21,11 @@ Use **Report an Issue** from **My Bookings** to report a problem with a workspac
 
 ## Required fields
 
-| Field       | Required |
-| ----------- | -------- |
-| Location    | Yes      |
-| Floor       | Yes      |
-| Desk No.    | Yes      |
-| Description | Yes      |
+| Field | Required |
+| --- | --- |
+| Location | Yes |
+| Floor | Yes |
+| Desk No. | Yes |
+| Description | Yes |
 
 > **Note:** Fields marked with an asterisk are mandatory.

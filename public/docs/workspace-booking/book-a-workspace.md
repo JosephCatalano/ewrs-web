@@ -50,19 +50,19 @@ Workspaces can be booked for the same day and up to 28 days in advance at non-OT
 
 The results table includes:
 
-| Column       | Description                                |
-| ------------ | ------------------------------------------ |
-| Desk number  | The workstation identifier                 |
+| Column | Description |
+| --- | --- |
+| Desk number | The workstation identifier |
 | Floor number | The floor where the workstation is located |
-| Features     | Available workspace equipment              |
+| Features | Available workspace equipment |
 
 ## Workspace features
 
-| Feature    | Meaning                                     |
-| ---------- | ------------------------------------------- |
+| Feature | Meaning |
+| --- | --- |
 | Monitor(s) | The workspace includes one or more monitors |
-| Mouse      | The workspace includes a mouse              |
-| Keyboard   | The workspace includes a keyboard           |
+| Mouse | The workspace includes a mouse |
+| Keyboard | The workspace includes a keyboard |
 
 > **Tip:** Hover over feature icons in EWRS to see what each icon represents.
 

@@ -4,7 +4,7 @@ This page tracks notable updates and new features shipped to the Employee Worksp
 
 ## Release 2026.2
 
-Watch the [Release 2026.2 demo video](https://ontariogov.sharepoint.com/:v:/r/sites/GSIC/BSOB/ewrs/Shared%20Documents/Production%20Implementations/2026.2/EWRS%20Release%202%20Video.mp4?csf=1&web=1&e=aQzCyr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) - A walkthrough of the new features & enhancements in this release.
+Watch the [Release 2026.2 demo video](https://ontariogov.sharepoint.com/:v:/r/sites/GSIC/BSOB/ewrs/Shared%20Documents/Production%20Implementations/2026.2/EWRS%20Release%202%20Video.mp4?csf=1&web=1&e=aQzCyr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) - A walkthrough of the new features &  enhancements in this release.
 
 ### New Features
 

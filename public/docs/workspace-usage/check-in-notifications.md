@@ -8,19 +8,19 @@ EWRS sends reminder emails when you have not checked into your booked workspace.
 
 Check-in requirements are standardized across all locations and divisions:
 
-| Booking period    | Check-in deadline |
-| ----------------- | ----------------- |
-| Full-day booking  | 10:00 a.m.        |
-| Morning booking   | 10:00 a.m.        |
-| Afternoon booking | 1:00 p.m.         |
+| Booking period | Check-in deadline |
+| --- | --- |
+| Full-day booking | 10:00 a.m. |
+| Morning booking | 10:00 a.m. |
+| Afternoon booking | 1:00 p.m. |
 
 Reminder emails are sent to alert you before the check-in deadline:
 
-| Booking period    | Reminder sent at |
-| ----------------- | ---------------- |
-| Full-day booking  | 9:30 a.m.        |
-| Morning booking   | 9:30 a.m.        |
-| Afternoon booking | 12:30 p.m.       |
+| Booking period | Reminder sent at |
+| --- | --- |
+| Full-day booking | 9:30 a.m. |
+| Morning booking | 9:30 a.m. |
+| Afternoon booking | 12:30 p.m. |
 
 > **Reminder:** You must check in as soon as you arrive at your workspace. If you do not check in by the deadline, your booking will be automatically cancelled and released to other users.
 

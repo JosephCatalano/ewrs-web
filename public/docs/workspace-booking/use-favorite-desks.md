@@ -1,6 +1,6 @@
 # Favourite Desks
 
-Favourite Desks allows you to save your preferred workspaces and quickly access them when booking.
+Favourite Desks allows you to save your preferred workspaces and quickly access them when booking. 
 
 ## How to mark a desk as a favourite
 
@@ -11,7 +11,8 @@ Favourite Desks allows you to save your preferred workspaces and quickly access 
 5. In the search results, locate a desk you want to save as a favourite.
 6. Select the **heart icon** next to the desk to mark it as a favourite.
 
-The desk is now saved as a favourite. Favourite desks appear at the top of your search results when available, helping you book preferred spaces faster. If none of your saved favourite desks are available for the selected search filters, a message will appear to inform you.
+
+The desk is now saved as a favourite. Favourite desks appear at the top of your search results when available, helping you book preferred spaces faster. If none of your saved favourite desks are available for the selected search filters, a message will appear to inform you. 
 
 ![Mark desk as favourite in search results](https://ewrs0001prd0420pub.blob.core.windows.net/ewrs-assets/favouritedesk.gif)
 

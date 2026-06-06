@@ -4,11 +4,11 @@ The Employee Workspace Booking System (EWRS) is the online booking tool Ontario 
 
 Use EWRS to book a workspace for the same day or up to 28 days in advance at your main location or locations.
 
-| Booking type                 | Availability                          |
-| ---------------------------- | ------------------------------------- |
+| Booking type | Availability |
+| --- | --- |
 | Standard workspace locations | Same day and up to 28 days in advance |
-| OPS Touchdown Centres (OTC)  | Up to 7 days in advance               |
-| Booking days                 | Monday to Friday                      |
+| OPS Touchdown Centres (OTC) | Up to 7 days in advance |
+| Booking days | Monday to Friday |
 
 > **Note:** OPS Touchdown Centre bookings can only be made 7 days in advance.
 

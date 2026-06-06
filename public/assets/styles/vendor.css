@@ -8,13 +8,11 @@
   font-family: 'FontAwesome';
   src: url(/dist/674f50d287a8c48dc19ba404d20fe713.eot);
   src:
-    url(/dist/674f50d287a8c48dc19ba404d20fe713.eot?#iefix&v=4.7.0)
-      format('embedded-opentype'),
+    url(/dist/674f50d287a8c48dc19ba404d20fe713.eot?#iefix&v=4.7.0) format('embedded-opentype'),
     url(/dist/af7ae505a9eed503f8b8e6982036873e.woff2) format('woff2'),
     url(/dist/fee66e712a8a08eef5805a46892932ad.woff) format('woff'),
     url(/dist/b06871f281fee6b241d60582ae9369b9.ttf) format('truetype'),
-    url(/dist/912ec66d7572ff821749319396470bde.svg#fontawesomeregular)
-      format('svg');
+    url(/dist/912ec66d7572ff821749319396470bde.svg#fontawesomeregular) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2682,8 +2680,8 @@ html {
 
 body {
   font-family:
-    -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+    -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
@@ -3071,8 +3069,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family:
-    Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 code {
@@ -6196,16 +6193,12 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
-.btn-group-vertical
-  > .btn-group:first-child:not(:last-child)
-  > .dropdown-toggle {
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical
-  > .btn-group:last-child:not(:first-child)
-  > .btn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -6314,8 +6307,7 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-group > .btn,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
-.input-group-btn:not(:first-child)
-  > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -6458,9 +6450,7 @@ tbody.collapse.show {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
-.custom-checkbox
-  .custom-control-input:indeterminate
-  ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
   background-color: #0275d8;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E");
 }
@@ -8411,8 +8401,8 @@ button.close {
   z-index: 1070;
   display: block;
   font-family:
-    -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+    -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -8525,8 +8515,8 @@ button.close {
   max-width: 276px;
   padding: 1px;
   font-family:
-    -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+    -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -8740,9 +8730,7 @@ button.close {
   }
 }
 
-@supports (
-  (-webkit-transform: translate3d(0, 0, 0)) or (transform: translate3d(0, 0, 0))
-) {
+@supports ((-webkit-transform: translate3d(0, 0, 0)) or (transform: translate3d(0, 0, 0))) {
   .carousel-item {
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
     transition: -webkit-transform 0.6s ease-in-out;
@@ -8792,9 +8780,7 @@ button.close {
   }
 }
 
-@supports (
-  (-webkit-transform: translate3d(0, 0, 0)) or (transform: translate3d(0, 0, 0))
-) {
+@supports ((-webkit-transform: translate3d(0, 0, 0)) or (transform: translate3d(0, 0, 0))) {
   .carousel-item-next.carousel-item-left,
   .carousel-item-prev.carousel-item-right {
     -webkit-transform: translate3d(0, 0, 0);
