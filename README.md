@@ -13,8 +13,9 @@ This is the Vite React scaffold for migrating EWRS from Angular to React.
 - Vite dev server configured for port `4200`.
 - Build mode scripts added for development, UAT, and production.
 - Prettier installed with format scripts and project config.
+- Husky pre-commit hook added to run lint-staged.
 
-Not implemented yet: routing, MSAL auth, API client, generated API types, tests, Storybook, static docs/assets migration, Husky/lint-staged, and CI pipeline updates.
+Not implemented yet: routing, MSAL auth, API client, generated API types, tests, Storybook, static docs/assets migration, and CI pipeline updates.
 
 ## Environment Files
 

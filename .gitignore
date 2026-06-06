@@ -15,6 +15,7 @@ dist-ssr
 .env.*.local
 .env.e2e-local
 .env.e2e-azure
+AGENTS.md
 
 # Editor directories and files
 .vscode/*
