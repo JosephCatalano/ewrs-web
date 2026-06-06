@@ -15,8 +15,9 @@ This is the Vite React scaffold for migrating EWRS from Angular to React.
 - Prettier installed with format scripts and project config.
 - Husky pre-commit hook added to run lint-staged.
 - Vitest and React Testing Library installed with a scaffold smoke test.
+- Playwright installed with a scaffold e2e smoke test.
 
-Not implemented yet: routing, MSAL auth, API client, generated API types, Playwright/e2e tests, Storybook, static docs/assets migration, and CI pipeline updates.
+Not implemented yet: routing, MSAL auth, API client, generated API types, Storybook, shared environment mode files, static docs/assets migration, and CI pipeline updates.
 
 ## Environment Files
 
@@ -58,6 +59,8 @@ npm.cmd run dev
 npm.cmd run lint
 npm.cmd run test
 npm.cmd run test:watch
+npm.cmd run e2e
+npm.cmd run e2e:ui
 npm.cmd run format
 npm.cmd run format:check
 npm.cmd run build
@@ -65,6 +68,18 @@ npm.cmd run build:dev
 npm.cmd run build:uat
 npm.cmd run build:prod
 npm.cmd run preview
+```
+
+## Verification
+
+Before marking migration setup work complete, run:
+
+```powershell
+npm.cmd run format:check
+npm.cmd run lint
+npm.cmd run test
+npm.cmd run e2e
+npm.cmd run build
 ```
 
 ## Migration Source Of Truth
