@@ -4,11 +4,7 @@
   --color-heading: #0b1f3a;
   --color-muted: #58667a;
 
-  font-family:
-    system-ui,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: 0;

@@ -12,8 +12,9 @@ This is the Vite React scaffold for migrating EWRS from Angular to React.
 - Local developer override file added in `.env.local`.
 - Vite dev server configured for port `4200`.
 - Build mode scripts added for development, UAT, and production.
+- Prettier installed with format scripts and project config.
 
-Not implemented yet: routing, MSAL auth, API client, generated API types, tests, Storybook, static docs/assets migration, and CI pipeline updates.
+Not implemented yet: routing, MSAL auth, API client, generated API types, tests, Storybook, static docs/assets migration, Husky/lint-staged, and CI pipeline updates.
 
 ## Environment Files
 
@@ -53,6 +54,8 @@ Use `npm.cmd` in PowerShell if `npm.ps1` is blocked by local execution policy.
 ```powershell
 npm.cmd run dev
 npm.cmd run lint
+npm.cmd run format
+npm.cmd run format:check
 npm.cmd run build
 npm.cmd run build:dev
 npm.cmd run build:uat
