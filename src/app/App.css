@@ -1,0 +1,27 @@
+.app-shell {
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.app-shell__content {
+  max-width: 760px;
+}
+
+.app-shell__eyebrow {
+  margin: 0 0 12px;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.app-shell__summary {
+  max-width: 640px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}

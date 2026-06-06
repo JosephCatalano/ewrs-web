@@ -1,0 +1,69 @@
+# EWRS Web React Migration
+
+This is the Vite React scaffold for migrating EWRS from Angular to React.
+
+## Current Status
+
+- Vite React TypeScript app scaffolded.
+- Strict TypeScript enabled.
+- App shell moved under `src/app`.
+- Initial migration folders created under `src/api`, `src/auth`, `src/features`, and `src/shared`.
+- Public environment contract added in `.env.example`.
+- Local developer override file added in `.env.local`.
+- Vite dev server configured for port `4200`.
+- Build mode scripts added for development, UAT, and production.
+
+Not implemented yet: routing, MSAL auth, API client, generated API types, tests, Storybook, static docs/assets migration, and CI pipeline updates.
+
+## Environment Files
+
+All `VITE_*` values are exposed to browser JavaScript. Do not put secrets, client secrets, passwords, private keys, or real e2e tokens in any Vite env file.
+
+Use `.env.example` as the committed contract for required variables.
+
+Use `.env.local` for local machine overrides. It should stay uncommitted.
+
+Later shared environment files can be added as needed:
+
+```text
+.env.development
+.env.uat
+.env.production
+```
+
+## Local Development
+
+From this folder:
+
+```powershell
+npm.cmd install
+npm.cmd run dev
+```
+
+Open:
+
+```text
+http://localhost:4200/
+```
+
+Use `npm.cmd` in PowerShell if `npm.ps1` is blocked by local execution policy.
+
+## Available Scripts
+
+```powershell
+npm.cmd run dev
+npm.cmd run lint
+npm.cmd run build
+npm.cmd run build:dev
+npm.cmd run build:uat
+npm.cmd run build:prod
+npm.cmd run preview
+```
+
+## Migration Source Of Truth
+
+Follow the repository migration plan in:
+
+```text
+../REACT_VITE_MIGRATION.md
+```
