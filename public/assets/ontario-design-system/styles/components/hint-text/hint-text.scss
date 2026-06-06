@@ -1,0 +1,10 @@
+@import '../../../sass/variables-import';
+@import '../../../sass/tools/common.mixins.scss';
+
+.ontario-hint {
+  @include ontario-word-wrap;
+  color: $ontario-greyscale-60;
+  display: inline-block;
+  margin: 0 0 $spacing-4 0;
+  width: 100%;
+}

@@ -1,0 +1,181 @@
+---
+title: Design system release notes
+label: Release notes
+---
+* [Release {{{ _config.project.version }}}](#latest)
+* [Release 0.6.1](#a0.6.1)
+* [Release 0.5.2](#a0.5.2)
+* [Release 0.4](#a4)
+* [Release 0.3](#a3)
+* [Release 0.2](#a2)
+* [Release 0.1](#a1)
+
+<hr class="dark">
+
+## <a name="latest"></a> {{{ _config.project.version }}} Release - {{{ _config.project.releaseDate }}}
+
+This is the seventh Alpha release of the Ontario Design System.
+
+### Platform
+- Added an index.html file to the distribution package to allow developers to quickly review available components and styles.
+
+### Elements
+- Added guidance for disabled buttons.
+
+### Known bugs and issues
+- Fixed: an issue with text not wrapping for radio button and checkbox labels and hint text.
+- Fixed: missing background colour for system-white in colours table
+
+### Distribution package
+- Download: [Design System {{{ _config.project.version }}}]({{path '../../dist/ontario-design-system-dist-{{{ _config.project.version }}}.zip'}})
+
+<hr>
+
+## <a name="a0.6.1"></a> 0.6.1 Release - November 5, 2020
+
+This is the sixth Alpha release of the Ontario Design System.
+
+### Platform
+- Fixed issue with component preview window on Android devices
+
+### Elements
+- Alerts and highlights added
+- Added a maximum line length for text components
+
+### Known bugs and issues
+- Resolved: issue with grid breakpoints not being triggered at the exact pixel width expected
+- Resolved: square highlight on click of radio button
+- Resolved: label length wrapping for longer texts
+
+### Distribution package
+- Download: [Design System 0.6.1]({{path '../../dist/ontario-design-system-dist-0.6.1.zip'}})
+
+<hr>
+
+## <a name="a0.5.2"></a> 0.5.2 Release - October 2, 2020
+
+This is the fifth Alpha release of the Ontario Design System.
+
+### Platform
+- Release date added to navigation
+- Form components grouped in menu
+- Faster webpages loading with Gzip compression
+- Minified CSS styles
+
+### Elements
+- List styles added
+- Radio buttons: label width bug fixed
+- Open Sans font 700 weight added; bold style changed to use 700 weight
+- Missing SVG icon added to distribution package
+- Fixes for SASS import paths
+- Minified theme file
+- Checkbox missing icon and styles fixes
+
+### Distribution package
+- Download: [Design System 0.5.2]({{path '../../dist/ontario-design-system-dist-0.5.2.zip'}})
+
+<hr>
+
+## <a name="a4"></a> 0.4 Release - June 9, 2020
+
+This is the fourth Alpha release of the Ontario Design System.
+
+### Platform
+
+As of this release:
+- The Design System is available in both English and French
+- Notes are integrated into the components pages
+- Component guidance pages work on mobile devices
+- Distribution package: [Design System 0.4.0]({{path '../../dist/ontario-design-system-dist-0.4.0.zip'}})
+
+
+### Elements
+- The system colour palette has some minor additions
+
+### Known bugs and issues:
+- Resolved: the order of the icons in the preview box does not match the order of the "Notes" table
+
+### Distribution package
+- Download: [Design System 0.4.0]({{path '../../dist/ontario-design-system-dist-0.4.0.zip'}})
+
+<hr>
+
+
+## <a name="a3"></a> 0.3 Release - April 27, 2020
+
+This is the third Alpha release of the Ontario Design System.
+
+### Platform
+* We released our design system theme for developers
+    * Distribution package: [Design System 0.3.0]({{path '../../dist/ontario-design-system-dist-0.3.0.zip'}})
+* We improved the display of variations in the component preview window
+
+### Elements
+
+* In this release, we’ve included:
+  * icons
+  * links
+* We’ve also included a survey to gather your [feedback about the design system]({{path '../give-feedback.html'}}).
+
+### Known bugs and issues
+* We’re still having issues with the design system on mobile that we’re working to resolve
+* The order of the icons in the preview box does not match the order in the “Notes” table
+
+### Distribution package
+- Download: [Design System 0.3.0]({{path '../../dist/ontario-design-system-dist-0.3.0.zip'}})
+
+<hr>
+
+## <a name="a2"></a> 0.2 Release - February 6, 2020
+
+This is the second Alpha release of the Ontario Design System.
+
+### Platform
+- We’ve designed a new landing page which is way more fun than what we use to have
+- We’ve also improved the accessibility of the site with better tab order, alt text on buttons and better performance in <abbr title="Internet Explorer 11">IE11</abbr>
+
+### Elements
+* In this release, we’ve included:
+  * a new radio button design
+  * checkboxes
+  * grid
+  * spacing
+* We’ve also updated the content and layout of some pages, based on your feedback
+
+### Known bugs and issues
+- We’re still having issues with the design system on mobile that we’re working to resolve
+
+<hr>
+
+## <a name="a1"></a> 0.1 Release - December 3, 2019
+
+This is the first Alpha release of the Ontario Design System.
+
+### Platform
+
+- We’ve released the first version of our design system platform using [Fractal](http://fractal.build), an open source solution
+- Fractal works well on desktop with Chrome, Safari and Firefox
+
+### Elements
+
+* In this release, we’ve included:
+  * design principles
+  * colours
+  * fonts and typography
+  * buttons
+  * dropdown lists
+  * hint text
+  * labels
+  * radio buttons
+  * text inputs
+  * textareas
+* Elements have been tested on <abbr title="Internet Explorer 11">IE11</abbr>, Microsoft Edge, Firefox, Chrome, Safari on PC, Mac, iPhone and Android
+* This release includes the HTML, CSS and SCSS
+
+### Known bugs and issues
+- We are testing these components for accessibility issues. There may be more issues we identify through the testing
+- We’re still having issues with the design system  in <abbr title="Internet Explorer 11">IE11</abbr>
+- We know there are issues with accessibility and navigation, particularly on mobile
+- We are currently using images in the guidance where they help to illustrate the guidance, and many of the images include text. In future releases, we want to move away from images and use code snippets to improve accessibility
+
+

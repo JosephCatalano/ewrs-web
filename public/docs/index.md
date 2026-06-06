@@ -1,0 +1,26 @@
+# EWRS User Manual
+
+- [Change Log](change-log.md)
+- [Assistance and Feedback](getting-started/assistance-and-feedback.md)
+- Getting Started
+  - [Introduction](getting-started/introduction.md)
+  - [Register for EWRS](getting-started/register-for-ewrs.md)
+- Buildings and Divisions
+  - [View Buildings](buildings-and-divisions/view-buildings.md)
+  - [View Floor Plans](buildings-and-divisions/view-floor-plans.md)
+  - [View Building Procedures](buildings-and-divisions/view-building-procedures.md)
+  - [View Divisions](buildings-and-divisions/view-divisions.md)
+- Workspace Booking
+  - [Book a Workspace](workspace-booking/book-a-workspace.md)
+  - [Favourite Desks](workspace-booking/use-favorite-desks.md)
+  - [Cancel a Booking](workspace-booking/cancel-a-booking.md)
+- Workspace Usage
+  - [Check-In Notifications](workspace-usage/check-in-notifications.md)
+  - [Check In](workspace-usage/check-in.md)
+  - [Check Out](workspace-usage/check-out.md)
+  - [Report a Workspace Issue](workspace-usage/report-a-workspace-issue.md)
+- Profile and Delegates
+  - [Edit Your Profile](profile-and-delegates/edit-your-profile.md)
+  - [Assign a Delegate](profile-and-delegates/assign-a-delegate.md)
+  - [Remove a Delegate](profile-and-delegates/remove-a-delegate.md)
+  - [Book as a Delegate](profile-and-delegates/book-as-a-delegate.md)

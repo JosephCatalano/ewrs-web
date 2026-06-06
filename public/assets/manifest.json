@@ -1,0 +1,13 @@
+{
+  "short_name": "EWRS",
+  "name": "Employee Workspace Reservation System",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/png",
+      "sizes": "16x16"
+    }
+  ],
+  "start_url": "index.html",
+  "theme_color": "#2E7A32"
+}

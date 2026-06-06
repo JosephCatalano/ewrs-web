@@ -1,0 +1,50 @@
+.ontario-label {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  cursor: pointer;
+  color: #1a1a1a;
+  font-family:
+    'Raleway', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  max-width: 38.75em;
+  width: 100%;
+}
+@media screen and (max-width: 40em) {
+  .ontario-label {
+    font-size: 1.125rem;
+    line-height: 1.56;
+  }
+}
+.ontario-label--large {
+  font-size: 1.75rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.2;
+  max-width: 26.25em;
+}
+@media screen and (max-width: 40em) {
+  .ontario-label--large {
+    font-size: 1.4375rem;
+    line-height: 1.39;
+  }
+}
+.ontario-label--heading h1 {
+  display: inline-block;
+  margin: 0;
+}
+.ontario-label__flag {
+  font-family: 'Raleway', 'Open Sans', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.ontario-label__flag:before {
+  content: ' ';
+}

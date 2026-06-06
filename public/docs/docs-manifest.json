@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-05-05T01:56:21.744Z",
+  "items": [
+    {
+      "title": "Change Log",
+      "path": "change-log.md",
+      "children": []
+    },
+    {
+      "title": "Assistance and Feedback",
+      "path": "getting-started/assistance-and-feedback.md",
+      "children": []
+    },
+    {
+      "title": "Getting Started",
+      "children": [
+        {
+          "title": "Introduction",
+          "path": "getting-started/introduction.md",
+          "children": []
+        },
+        {
+          "title": "Register for EWRS",
+          "path": "getting-started/register-for-ewrs.md",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Buildings and Divisions",
+      "children": [
+        {
+          "title": "View Buildings",
+          "path": "buildings-and-divisions/view-buildings.md",
+          "children": []
+        },
+        {
+          "title": "View Floor Plans",
+          "path": "buildings-and-divisions/view-floor-plans.md",
+          "children": []
+        },
+        {
+          "title": "View Building Procedures",
+          "path": "buildings-and-divisions/view-building-procedures.md",
+          "children": []
+        },
+        {
+          "title": "View Divisions",
+          "path": "buildings-and-divisions/view-divisions.md",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Workspace Booking",
+      "children": [
+        {
+          "title": "Book a Workspace",
+          "path": "workspace-booking/book-a-workspace.md",
+          "children": []
+        },
+        {
+          "title": "Favorite Desks",
+          "path": "workspace-booking/use-favorite-desks.md",
+          "children": []
+        },
+        {
+          "title": "Cancel a Booking",
+          "path": "workspace-booking/cancel-a-booking.md",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Workspace Usage",
+      "children": [
+        {
+          "title": "Check-In Notifications",
+          "path": "workspace-usage/check-in-notifications.md",
+          "children": []
+        },
+        {
+          "title": "Check In",
+          "path": "workspace-usage/check-in.md",
+          "children": []
+        },
+        {
+          "title": "Check Out",
+          "path": "workspace-usage/check-out.md",
+          "children": []
+        },
+        {
+          "title": "Report a Workspace Issue",
+          "path": "workspace-usage/report-a-workspace-issue.md",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Profile and Delegates",
+      "children": [
+        {
+          "title": "Edit Your Profile",
+          "path": "profile-and-delegates/edit-your-profile.md",
+          "children": []
+        },
+        {
+          "title": "Assign a Delegate",
+          "path": "profile-and-delegates/assign-a-delegate.md",
+          "children": []
+        },
+        {
+          "title": "Remove a Delegate",
+          "path": "profile-and-delegates/remove-a-delegate.md",
+          "children": []
+        },
+        {
+          "title": "Book as a Delegate",
+          "path": "profile-and-delegates/book-as-a-delegate.md",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
