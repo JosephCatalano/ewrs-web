@@ -1,9 +1,11 @@
 import './App.css'
 import { AlertHost } from '../shared/alerts'
+import { LoaderOverlay } from '../shared/loader'
 
 function App() {
   return (
     <>
+      <LoaderOverlay />
       <AlertHost />
       <main className="app-shell" aria-labelledby="app-title">
         <div className="app-shell__content">

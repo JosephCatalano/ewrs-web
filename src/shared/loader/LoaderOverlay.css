@@ -1,0 +1,58 @@
+.loader-overlay {
+  position: fixed;
+  z-index: 500000;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  overflow: hidden;
+}
+
+.loader-overlay__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.loader-overlay__track {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: rgb(205 0 0 / 16%);
+}
+
+.loader-overlay__bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -40%;
+  width: 40%;
+  background: #cd0000;
+  animation: loader-overlay-slide 1.2s ease-in-out infinite;
+}
+
+@keyframes loader-overlay-slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(220%);
+  }
+
+  100% {
+    transform: translateX(360%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-overlay__bar {
+    left: 0;
+    width: 100%;
+    animation: none;
+  }
+}

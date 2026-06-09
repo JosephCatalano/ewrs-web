@@ -2,6 +2,7 @@ import { useQueryClient } from '@tanstack/react-query'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 
+import { useLoader } from '../shared/loader'
 import { AppProviders } from './AppProviders'
 
 const telemetryMocks = vi.hoisted(() => ({
@@ -18,6 +19,16 @@ function QueryProviderProbe() {
   return (
     <main>
       {queryClient ? 'Query provider ready' : 'Query provider missing'}
+    </main>
+  )
+}
+
+function LoaderProviderProbe() {
+  const { isManuallyLoading } = useLoader()
+
+  return (
+    <main>
+      {isManuallyLoading ? 'Loader provider active' : 'Loader provider ready'}
     </main>
   )
 }
@@ -41,6 +52,16 @@ describe('AppProviders', () => {
     )
 
     expect(screen.getByText(/query provider ready/i)).toBeInTheDocument()
+  })
+
+  it('provides the shared loader context', () => {
+    render(
+      <AppProviders>
+        <LoaderProviderProbe />
+      </AppProviders>,
+    )
+
+    expect(screen.getByText(/loader provider ready/i)).toBeInTheDocument()
   })
 
   it('initializes telemetry through the provider module', () => {

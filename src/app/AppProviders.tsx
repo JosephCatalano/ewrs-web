@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 import { queryClient } from '../api/queryClient'
 import { getMsalInstance } from '../auth/msalConfig'
 import { AlertProvider } from '../shared/alerts'
+import { LoaderProvider } from '../shared/loader'
 import { initializeAppInsights } from '../telemetry/appInsights'
 
 type AppProvidersProps = {
@@ -19,7 +20,9 @@ export function AppProviders({ children }: AppProvidersProps) {
   return (
     <MsalProvider instance={msalInstance}>
       <QueryClientProvider client={queryClient}>
-        <AlertProvider>{children}</AlertProvider>
+        <LoaderProvider>
+          <AlertProvider>{children}</AlertProvider>
+        </LoaderProvider>
       </QueryClientProvider>
     </MsalProvider>
   )

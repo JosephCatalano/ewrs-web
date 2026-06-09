@@ -1,16 +1,23 @@
+import { QueryClientProvider } from '@tanstack/react-query'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { expect } from 'storybook/test'
 
+import { queryClient } from '../api/queryClient'
 import { AlertProvider } from '../shared/alerts'
+import { LoaderProvider } from '../shared/loader'
 import App from './App'
 
 const meta = {
   component: App,
   decorators: [
     (Story) => (
-      <AlertProvider>
-        <Story />
-      </AlertProvider>
+      <QueryClientProvider client={queryClient}>
+        <LoaderProvider>
+          <AlertProvider>
+            <Story />
+          </AlertProvider>
+        </LoaderProvider>
+      </QueryClientProvider>
     ),
   ],
   parameters: { layout: 'fullscreen' },

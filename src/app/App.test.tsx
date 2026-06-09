@@ -1,15 +1,24 @@
+import { QueryClientProvider } from '@tanstack/react-query'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
+import { createQueryClient } from '../api/queryClient'
 import { AlertProvider } from '../shared/alerts'
+import { LoaderProvider } from '../shared/loader'
 import App from './App'
 
 describe('App', () => {
   it('renders the migration shell', () => {
+    const queryClient = createQueryClient()
+
     render(
-      <AlertProvider>
-        <App />
-      </AlertProvider>,
+      <QueryClientProvider client={queryClient}>
+        <LoaderProvider>
+          <AlertProvider>
+            <App />
+          </AlertProvider>
+        </LoaderProvider>
+      </QueryClientProvider>,
     )
 
     expect(
