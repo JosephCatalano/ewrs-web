@@ -1,10 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { expect } from 'storybook/test'
 
+import { AlertProvider } from '../shared/alerts'
 import App from './App'
 
 const meta = {
   component: App,
+  decorators: [
+    (Story) => (
+      <AlertProvider>
+        <Story />
+      </AlertProvider>
+    ),
+  ],
   parameters: { layout: 'fullscreen' },
 } satisfies Meta<typeof App>
 

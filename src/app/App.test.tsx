@@ -1,11 +1,16 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
+import { AlertProvider } from '../shared/alerts'
 import App from './App'
 
 describe('App', () => {
   it('renders the migration shell', () => {
-    render(<App />)
+    render(
+      <AlertProvider>
+        <App />
+      </AlertProvider>,
+    )
 
     expect(
       screen.getByRole('heading', {

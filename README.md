@@ -27,6 +27,7 @@ This is the Vite React migration workspace for moving EWRS from Angular to React
 - OpenAPI type generation configured with `@hey-api/openapi-ts`; generated types live under `src/api/generated`.
 - TanStack Query provider added through `src/app/AppProviders.tsx` with centralized retry defaults in `src/api/queryClient.ts`.
 - AppInsights telemetry wrapper added under `src/telemetry`, initialized from `AppProviders`, with safe no-op behavior when telemetry config is absent.
+- Shared alert provider and host added under `src/shared/alerts`, wired through `AppProviders` and `App`, with target-aware rendering and text-only message output.
 
 Not implemented yet: routing, feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
