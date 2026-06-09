@@ -25,6 +25,7 @@ This is the Vite React migration workspace for moving EWRS from Angular to React
 - MSAL React provider wiring added through `src/app/AppProviders.tsx` so app-wide providers stay centralized.
 - Generic API client foundation added with API base URL validation, MSAL/e2e bearer token injection, and safe non-2xx errors.
 - OpenAPI type generation configured with `@hey-api/openapi-ts`; generated types live under `src/api/generated`.
+- TanStack Query provider added through `src/app/AppProviders.tsx` with centralized retry defaults in `src/api/queryClient.ts`.
 
 Not implemented yet: routing, feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
