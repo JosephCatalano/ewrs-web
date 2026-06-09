@@ -5,6 +5,7 @@ import { describe, expect, it } from 'vitest'
 import { createQueryClient } from '../api/queryClient'
 import { AlertProvider } from '../shared/alerts'
 import { LoaderProvider } from '../shared/loader'
+import { ThemeProvider } from '../shared/theme'
 import App from './App'
 
 describe('App', () => {
@@ -13,11 +14,13 @@ describe('App', () => {
 
     render(
       <QueryClientProvider client={queryClient}>
-        <LoaderProvider>
-          <AlertProvider>
-            <App />
-          </AlertProvider>
-        </LoaderProvider>
+        <ThemeProvider>
+          <LoaderProvider>
+            <AlertProvider>
+              <App />
+            </AlertProvider>
+          </LoaderProvider>
+        </ThemeProvider>
       </QueryClientProvider>,
     )
 

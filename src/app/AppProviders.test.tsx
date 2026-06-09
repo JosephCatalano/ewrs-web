@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 
 import { useLoader } from '../shared/loader'
+import { useTheme } from '../shared/theme'
 import { AppProviders } from './AppProviders'
 
 const telemetryMocks = vi.hoisted(() => ({
@@ -31,6 +32,12 @@ function LoaderProviderProbe() {
       {isManuallyLoading ? 'Loader provider active' : 'Loader provider ready'}
     </main>
   )
+}
+
+function ThemeProviderProbe() {
+  const { preference } = useTheme()
+
+  return <main>Theme provider ready: {preference}</main>
 }
 
 describe('AppProviders', () => {
@@ -62,6 +69,16 @@ describe('AppProviders', () => {
     )
 
     expect(screen.getByText(/loader provider ready/i)).toBeInTheDocument()
+  })
+
+  it('provides the shared theme context', () => {
+    render(
+      <AppProviders>
+        <ThemeProviderProbe />
+      </AppProviders>,
+    )
+
+    expect(screen.getByText(/theme provider ready/i)).toBeInTheDocument()
   })
 
   it('initializes telemetry through the provider module', () => {

@@ -6,6 +6,7 @@ import { queryClient } from '../api/queryClient'
 import { getMsalInstance } from '../auth/msalConfig'
 import { AlertProvider } from '../shared/alerts'
 import { LoaderProvider } from '../shared/loader'
+import { ThemeProvider } from '../shared/theme'
 import { initializeAppInsights } from '../telemetry/appInsights'
 
 type AppProvidersProps = {
@@ -20,9 +21,11 @@ export function AppProviders({ children }: AppProvidersProps) {
   return (
     <MsalProvider instance={msalInstance}>
       <QueryClientProvider client={queryClient}>
-        <LoaderProvider>
-          <AlertProvider>{children}</AlertProvider>
-        </LoaderProvider>
+        <ThemeProvider>
+          <LoaderProvider>
+            <AlertProvider>{children}</AlertProvider>
+          </LoaderProvider>
+        </ThemeProvider>
       </QueryClientProvider>
     </MsalProvider>
   )

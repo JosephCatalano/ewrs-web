@@ -29,6 +29,7 @@ This is the Vite React migration workspace for moving EWRS from Angular to React
 - AppInsights telemetry wrapper added under `src/telemetry`, initialized from `AppProviders`, with safe no-op behavior when telemetry config is absent.
 - Shared alert provider and host added under `src/shared/alerts`, wired through `AppProviders` and `App`, with Figma-aligned Ontario page alert styling, target-aware rendering, explicit close behavior, and text-only message output.
 - Shared loader provider and top progress overlay added under `src/shared/loader`, wired through `AppProviders` and `App`, with manual loader controls plus automatic TanStack Query fetch/mutation activity detection.
+- Shared theme provider added under `src/shared/theme`, wired through `AppProviders`, with `system`/`light`/`dark` preference support, legacy `darkMode` migration, persisted `themePreference`, and root/body theme classes.
 
 Not implemented yet: routing, feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 

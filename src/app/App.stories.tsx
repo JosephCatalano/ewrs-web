@@ -5,6 +5,7 @@ import { expect } from 'storybook/test'
 import { queryClient } from '../api/queryClient'
 import { AlertProvider } from '../shared/alerts'
 import { LoaderProvider } from '../shared/loader'
+import { ThemeProvider } from '../shared/theme'
 import App from './App'
 
 const meta = {
@@ -12,11 +13,13 @@ const meta = {
   decorators: [
     (Story) => (
       <QueryClientProvider client={queryClient}>
-        <LoaderProvider>
-          <AlertProvider>
-            <Story />
-          </AlertProvider>
-        </LoaderProvider>
+        <ThemeProvider>
+          <LoaderProvider>
+            <AlertProvider>
+              <Story />
+            </AlertProvider>
+          </LoaderProvider>
+        </ThemeProvider>
       </QueryClientProvider>
     ),
   ],

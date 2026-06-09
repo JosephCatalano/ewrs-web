@@ -8,7 +8,7 @@
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: 0;
-  color-scheme: light dark;
+  color-scheme: light;
   color: var(--color-text);
   background: var(--color-page);
   font-synthesis: none;
@@ -17,12 +17,32 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root.theme-light {
+  --color-page: #f7f9fc;
+  --color-text: #172033;
+  --color-heading: #0b1f3a;
+  --color-muted: #58667a;
+
+  color-scheme: light;
+}
+
+:root.theme-dark {
+  --color-page: #101418;
+  --color-text: #e7edf5;
+  --color-heading: #ffffff;
+  --color-muted: #a7b3c2;
+
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.theme-light):not(.theme-dark) {
     --color-page: #101418;
     --color-text: #e7edf5;
     --color-heading: #ffffff;
     --color-muted: #a7b3c2;
+
+    color-scheme: dark;
   }
 }
 
