@@ -4,12 +4,15 @@ import type { ReactNode } from 'react'
 
 import { queryClient } from '../api/queryClient'
 import { getMsalInstance } from '../auth/msalConfig'
+import { initializeAppInsights } from '../telemetry/appInsights'
 
 type AppProvidersProps = {
   children: ReactNode
 }
 
 const msalInstance = getMsalInstance()
+
+initializeAppInsights()
 
 export function AppProviders({ children }: AppProvidersProps) {
   return (

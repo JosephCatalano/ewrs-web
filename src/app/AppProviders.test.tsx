@@ -1,8 +1,16 @@
 import { useQueryClient } from '@tanstack/react-query'
 import { render, screen } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { AppProviders } from './AppProviders'
+
+const telemetryMocks = vi.hoisted(() => ({
+  initializeAppInsights: vi.fn(),
+}))
+
+vi.mock('../telemetry/appInsights', () => ({
+  initializeAppInsights: telemetryMocks.initializeAppInsights,
+}))
 
 function QueryProviderProbe() {
   const queryClient = useQueryClient()
@@ -33,5 +41,9 @@ describe('AppProviders', () => {
     )
 
     expect(screen.getByText(/query provider ready/i)).toBeInTheDocument()
+  })
+
+  it('initializes telemetry through the provider module', () => {
+    expect(telemetryMocks.initializeAppInsights).toHaveBeenCalledTimes(1)
   })
 })
