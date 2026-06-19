@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
 import { queryClient } from '../api/queryClient'
+import { AuthSessionProvider } from '../auth/AuthSessionProvider'
 import { getMsalInstance } from '../auth/msalConfig'
 import { AlertProvider } from '../shared/alerts'
 import { LoaderProvider } from '../shared/loader'
@@ -22,13 +23,15 @@ export function AppProviders({ children }: AppProvidersProps) {
   return (
     <MsalProvider instance={msalInstance}>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider>
-          <LoaderProvider>
-            <AlertProvider>
-              <BrowserRouter>{children}</BrowserRouter>
-            </AlertProvider>
-          </LoaderProvider>
-        </ThemeProvider>
+        <AuthSessionProvider>
+          <ThemeProvider>
+            <LoaderProvider>
+              <AlertProvider>
+                <BrowserRouter>{children}</BrowserRouter>
+              </AlertProvider>
+            </LoaderProvider>
+          </ThemeProvider>
+        </AuthSessionProvider>
       </QueryClientProvider>
     </MsalProvider>
   )

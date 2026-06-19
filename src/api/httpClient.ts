@@ -54,7 +54,9 @@ async function getAuthorizationHeader(): Promise<string> {
   }
 
   const msal = getMsalInstance()
-  const account = msal.getActiveAccount()
+  // Prefer the active account, but fall back to the first signed-in account so a
+  // request that fires before the active account is selected still succeeds.
+  const account = msal.getActiveAccount() ?? msal.getAllAccounts()[0]
 
   if (!account) {
     throw new ApiAuthError('No active MSAL account is available')

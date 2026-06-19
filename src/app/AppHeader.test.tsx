@@ -115,4 +115,34 @@ describe('AppHeader', () => {
     expect(darkOption).toHaveAttribute('aria-checked', 'true')
     expect(document.documentElement).toHaveClass('theme-dark')
   })
+
+  it('offers Sign in (not Settings) when there is no current user', async () => {
+    const user = userEvent.setup()
+    mockCurrentUser(undefined)
+    renderHeader()
+
+    await user.click(screen.getByRole('button', { name: /account/i }))
+
+    expect(
+      screen.getByRole('menuitem', { name: /sign in/i }),
+    ).toBeInTheDocument()
+    expect(
+      screen.queryByRole('menuitem', { name: /settings/i }),
+    ).not.toBeInTheDocument()
+  })
+
+  it('offers Settings (not Sign in) when a user is signed in', async () => {
+    const user = userEvent.setup()
+    mockCurrentUser(userWithRoles([RoleConst.User]))
+    renderHeader()
+
+    await user.click(screen.getByRole('button', { name: /jordan lee/i }))
+
+    expect(
+      screen.getByRole('menuitem', { name: /settings/i }),
+    ).toBeInTheDocument()
+    expect(
+      screen.queryByRole('menuitem', { name: /sign in/i }),
+    ).not.toBeInTheDocument()
+  })
 })

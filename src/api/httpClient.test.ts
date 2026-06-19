@@ -51,6 +51,7 @@ describe('apiFetch', () => {
   let msalMock: {
     acquireTokenSilent: ReturnType<typeof vi.fn>
     getActiveAccount: ReturnType<typeof vi.fn>
+    getAllAccounts: ReturnType<typeof vi.fn>
   }
 
   beforeEach(() => {
@@ -60,6 +61,7 @@ describe('apiFetch', () => {
         .fn()
         .mockResolvedValue({ accessToken: 'msal-access-token' }),
       getActiveAccount: vi.fn().mockReturnValue(account),
+      getAllAccounts: vi.fn().mockReturnValue([account]),
     }
 
     vi.stubGlobal('fetch', fetchMock)
@@ -127,8 +129,21 @@ describe('apiFetch', () => {
     expect(msalMock.acquireTokenSilent).not.toHaveBeenCalled()
   })
 
-  it('fails safely when no active MSAL account is available', async () => {
+  it('falls back to the first signed-in account when none is active', async () => {
     msalMock.getActiveAccount.mockReturnValue(null)
+
+    await apiFetch('users/me')
+
+    expect(msalMock.acquireTokenSilent).toHaveBeenCalledWith({
+      ...apiTokenRequest,
+      account,
+    })
+    expect(fetchMock).toHaveBeenCalledTimes(1)
+  })
+
+  it('fails safely when no MSAL account is available', async () => {
+    msalMock.getActiveAccount.mockReturnValue(null)
+    msalMock.getAllAccounts.mockReturnValue([])
 
     await expect(apiFetch('users/me')).rejects.toBeInstanceOf(ApiAuthError)
 

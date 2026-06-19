@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
+import { signIn } from '../auth/authActions'
 import { canAccess } from '../auth/roles'
 import { getUserRoleIds, useCurrentUser } from '../auth/useCurrentUser'
 import { useTheme } from '../shared/theme'
@@ -56,6 +57,7 @@ export function AppHeader() {
 
   const roleIds = getUserRoleIds(currentUser)
   const visibleNavItems = NAV_ITEMS.filter((item) => item.isVisible(roleIds))
+  const isSignedIn = Boolean(currentUser)
   const accountName = currentUser?.displayName ?? 'Account'
 
   useEffect(() => {
@@ -127,13 +129,24 @@ export function AppHeader() {
 
           {isAccountMenuOpen ? (
             <div className="app-menu" id={menuId} role="menu">
-              <Link
-                className="app-menu__item"
-                role="menuitem"
-                to="/edit-profile"
-              >
-                Settings
-              </Link>
+              {isSignedIn ? (
+                <Link
+                  className="app-menu__item"
+                  role="menuitem"
+                  to="/edit-profile"
+                >
+                  Settings
+                </Link>
+              ) : (
+                <button
+                  className="app-menu__item"
+                  onClick={signIn}
+                  role="menuitem"
+                  type="button"
+                >
+                  Sign in
+                </button>
+              )}
               <Link className="app-menu__item" role="menuitem" to="/docs">
                 User Guide
               </Link>

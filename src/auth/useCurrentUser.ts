@@ -4,7 +4,7 @@ import { readApiResult } from '../api/apiResult'
 import type { User } from '../api/generated'
 import { apiFetch } from '../api/httpClient'
 import { getAppConfig } from '../app/config'
-import { getActiveAccountIfReady } from './msalConfig'
+import { useAuthSession } from './authSessionContext'
 
 export const currentUserQueryKey = ['currentUser'] as const
 
@@ -18,11 +18,12 @@ async function fetchCurrentUser(): Promise<User | null> {
   return readApiResult<User>(response)
 }
 
-// Only load the current user once an auth context exists. Guarded so component
-// renders (and tests) never trigger MSAL construction or a /me call before
-// login. The config read is wrapped because getAppConfig throws on invalid
+// Only load the current user once an auth context exists, so renders (and
+// tests/stories) never trigger a /me call before login. In MSAL mode this
+// tracks the auth session's active account; e2e mode uses the configured token.
+// The config read is wrapped because getAppConfig throws on invalid
 // environments, which must not break rendering.
-function hasAuthContext(): boolean {
+function hasAuthContext(msalAuthenticated: boolean): boolean {
   try {
     const config = getAppConfig()
 
@@ -30,7 +31,7 @@ function hasAuthContext(): boolean {
       return Boolean(config.e2eToken)
     }
 
-    return Boolean(getActiveAccountIfReady())
+    return msalAuthenticated
   } catch {
     return false
   }
@@ -43,10 +44,12 @@ export function getUserRoleIds(user: User | null | undefined): number[] {
 }
 
 export function useCurrentUser() {
+  const { isAuthenticated } = useAuthSession()
+
   return useQuery({
     queryKey: currentUserQueryKey,
     queryFn: fetchCurrentUser,
-    enabled: hasAuthContext(),
+    enabled: hasAuthContext(isAuthenticated),
     staleTime: 5 * 60 * 1000,
   })
 }
