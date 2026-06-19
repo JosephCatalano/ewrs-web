@@ -32,9 +32,11 @@ This is the Vite React migration workspace for moving EWRS from Angular to React
 - Shared theme provider added under `src/shared/theme`, wired through `AppProviders`, with `system`/`light`/`dark` preference support, legacy `darkMode` migration, persisted `themePreference`, and root/body theme classes.
 - Shared CSS theme tokens added under `src/styles/tokens.css`; light mode is sourced from the Ontario Design System UI prototyping kit colour page, and dark mode uses Carbon Gray 90 neutral surfaces only where ODS does not define a dark equivalent while preserving Ontario blue action/focus colors.
 - Role constants and nav authorization helpers added under `src/auth/roles.ts`, preserving the exact Angular numeric role IDs and `authorize*` visibility rules.
-- `useCurrentUser` hook added under `src/auth/useCurrentUser.ts`, loading `GET /api/User/me` through the shared API client and TanStack Query; the header reads it to gate primary nav by role.
+- `useCurrentUser` hook added under `src/auth/useCurrentUser.ts`, loading `GET /api/User/me` through the shared API client and TanStack Query, unwrapping the `ApiResult` envelope (`value`); the header reads it to gate primary nav by role.
+- User-status constants added under `src/auth/userStatus.ts` (UnRegistered/Active/Deactivated), ready for the route guard.
+- React Router added: `src/app/AppRoutes.tsx` defines every preserved EWRS route (each rendering a placeholder page) with index/wildcard redirects to `/home`; `BrowserRouter` is wired in `AppProviders`, and the header/footer use SPA navigation with active-link styling.
 
-Not implemented yet: routing (nav uses plain anchors until React Router is added), sign in/out and MSAL account-name wiring in the header, the Active-status/`/register` redirect (needs the Angular `userStatus.const` values), feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
+Not implemented yet: the route guard (MSAL wait, role/status redirects), sign in/out and MSAL account-name wiring in the header, the real feature pages (all routes currently render placeholders), the `/docs` default-page redirect, feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
 ## Environment Files
 

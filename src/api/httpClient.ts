@@ -18,6 +18,10 @@ export class ApiAuthError extends Error {
   }
 }
 
+// Resolves a caller-supplied path against the API base URL and rejects anything
+// that escapes it. This prevents a bearer token from being attached to an
+// absolute URL, a protocol-relative URL, or a `../` traversal that points at a
+// different origin than the trusted API.
 function createApiUrl(path: string, apiBaseUrl: string): URL {
   if (/^[a-z][a-z\d+\-.]*:/i.test(path) || path.startsWith('//')) {
     throw new TypeError('API path must be relative to VITE_API_BASE_URL')

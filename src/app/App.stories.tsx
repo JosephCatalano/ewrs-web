@@ -1,5 +1,6 @@
 import { QueryClientProvider } from '@tanstack/react-query'
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { MemoryRouter } from 'react-router-dom'
 import { expect } from 'storybook/test'
 
 import { queryClient } from '../api/queryClient'
@@ -16,7 +17,9 @@ const meta = {
         <ThemeProvider>
           <LoaderProvider>
             <AlertProvider>
-              <Story />
+              <MemoryRouter initialEntries={['/home']}>
+                <Story />
+              </MemoryRouter>
             </AlertProvider>
           </LoaderProvider>
         </ThemeProvider>
@@ -29,13 +32,15 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-// Proves <main aria-labelledby="app-title"> derives its accessible name from
-// the heading, which the bare render test does not assert.
+// Proves the shell renders the routed home placeholder inside the main landmark.
 export const Default: Story = {
   play: async ({ canvas }) => {
+    const main = canvas.getByRole('main')
+
     await expect(
-      canvas.getByRole('main', { name: /react shell ready/i }),
+      canvas.getByRole('heading', { level: 1, name: /^home$/i }),
     ).toBeVisible()
+    await expect(main).toBeVisible()
   },
 }
 
@@ -44,7 +49,7 @@ export const CssCheck: Story = {
   play: async ({ canvas }) => {
     const heading = canvas.getByRole('heading', {
       level: 1,
-      name: /react shell ready/i,
+      name: /^home$/i,
     })
 
     await expect(getComputedStyle(heading).boxSizing).toBe('border-box')

@@ -2,6 +2,9 @@ import { QueryClient } from '@tanstack/react-query'
 
 import { ApiAuthError, ApiError } from './httpClient'
 
+// Retrying auth failures or 4xx client errors just repeats a request that cannot
+// succeed (missing token, forbidden, not found, validation). Only transient
+// server/network failures are retried, and only once.
 function shouldRetry(failureCount: number, error: unknown): boolean {
   if (error instanceof ApiAuthError) {
     return false

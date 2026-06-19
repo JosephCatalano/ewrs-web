@@ -120,7 +120,8 @@ export function resetAppInsightsForTests(): void {
   initializationAttempted = false
 }
 
-// TODO: When React Router and current-user loading are migrated, call
-// `trackPageView` from a route-change hook and call
-// `setAuthenticatedUserContext` after `/user/me` succeeds. Keep access tokens,
-// auth responses, and unnecessary personal data out of telemetry properties.
+// Automatic route tracking is disabled (enableAutoRouteTracking: false). Now
+// that React Router and useCurrentUser exist, the remaining work is to call
+// `trackPageView` from a route-change effect and `setAuthenticatedUserContext`
+// after `/me` succeeds. Keep access tokens, auth responses, and unnecessary
+// personal data out of telemetry properties.

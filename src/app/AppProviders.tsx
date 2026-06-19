@@ -1,6 +1,7 @@
 import { QueryClientProvider } from '@tanstack/react-query'
 import { MsalProvider } from '@azure/msal-react'
 import type { ReactNode } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 import { queryClient } from '../api/queryClient'
 import { getMsalInstance } from '../auth/msalConfig'
@@ -23,7 +24,9 @@ export function AppProviders({ children }: AppProvidersProps) {
       <QueryClientProvider client={queryClient}>
         <ThemeProvider>
           <LoaderProvider>
-            <AlertProvider>{children}</AlertProvider>
+            <AlertProvider>
+              <BrowserRouter>{children}</BrowserRouter>
+            </AlertProvider>
           </LoaderProvider>
         </ThemeProvider>
       </QueryClientProvider>

@@ -83,6 +83,9 @@ function validateEnv(env: ConfigEnv): string[] {
       errors.push('VITE_AAD_AUTHORITY must be an absolute HTTP(S) URL')
     }
 
+    // MSAL expects the tenant authority (…/{tenant-id}), not an OAuth token
+    // endpoint. Catch the common misconfiguration early instead of failing
+    // later inside MSAL with an opaque error.
     if (/\/oauth2\/v2\.0\/token\/?$/i.test(authority)) {
       errors.push('VITE_AAD_AUTHORITY must be the tenant authority URL')
     }

@@ -124,6 +124,8 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
     handleChange(mediaQuery)
 
+    // Safari < 14 only implements the deprecated MediaQueryList.addListener
+    // API, so fall back to it when addEventListener is unavailable.
     if (typeof mediaQuery.addEventListener === 'function') {
       mediaQuery.addEventListener('change', handleChange)
 

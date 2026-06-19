@@ -1,17 +1,10 @@
-.app-shell {
-  display: flex;
-  min-height: 480px;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  background: var(--ewrs-background);
-}
-
-.app-shell__content {
+.page-placeholder {
   max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 32px;
 }
 
-.app-shell__eyebrow {
+.page-placeholder__eyebrow {
   margin: 0 0 12px;
   color: var(--ewrs-text-secondary);
   font-size: 0.875rem;
@@ -19,8 +12,7 @@
   text-transform: uppercase;
 }
 
-.app-shell__summary {
-  max-width: 640px;
+.page-placeholder__note {
   margin: 0;
   color: var(--ewrs-text-secondary);
   font-size: 1.125rem;

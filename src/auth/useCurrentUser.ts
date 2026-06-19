@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 
+import { readApiResult } from '../api/apiResult'
 import type { User } from '../api/generated'
 import { apiFetch } from '../api/httpClient'
 import { getAppConfig } from '../app/config'
@@ -7,13 +8,14 @@ import { getActiveAccountIfReady } from './msalConfig'
 
 export const currentUserQueryKey = ['currentUser'] as const
 
-// Swagger types the `GET /api/User/me` 200 body as `unknown`, so we treat the
-// response as the generated `User` entity. Verify this shape against the API
-// before depending on fields beyond id/displayName/userRoles/userStatusId.
-async function fetchCurrentUser(): Promise<User> {
+// `GET /api/User/me` returns an ApiResult envelope; the user is in `value`
+// (the Angular AuthGuard/CurrentUserService both read `data.value`). Swagger
+// types the body as `unknown`, so the `User` shape is assumed and should be
+// verified against the live API.
+async function fetchCurrentUser(): Promise<User | null> {
   const response = await apiFetch('User/me')
 
-  return (await response.json()) as User
+  return readApiResult<User>(response)
 }
 
 // Only load the current user once an auth context exists. Guarded so component
@@ -34,7 +36,7 @@ function hasAuthContext(): boolean {
   }
 }
 
-export function getUserRoleIds(user: User | undefined): number[] {
+export function getUserRoleIds(user: User | null | undefined): number[] {
   return (user?.userRoles ?? [])
     .map((role) => role.roleTypeId)
     .filter((roleId): roleId is number => typeof roleId === 'number')

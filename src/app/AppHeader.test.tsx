@@ -1,6 +1,7 @@
 import type { UseQueryResult } from '@tanstack/react-query'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import type { User } from '../api/generated'
@@ -32,9 +33,11 @@ function userWithRoles(roleTypeIds: number[]): User {
 
 function renderHeader() {
   return render(
-    <ThemeProvider>
-      <AppHeader />
-    </ThemeProvider>,
+    <MemoryRouter>
+      <ThemeProvider>
+        <AppHeader />
+      </ThemeProvider>
+    </MemoryRouter>,
   )
 }
 

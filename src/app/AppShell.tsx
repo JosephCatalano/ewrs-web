@@ -17,7 +17,9 @@ export function AppShell({ children }: AppShellProps) {
 
       <AppHeader />
 
-      <div className="app-layout__content">{children}</div>
+      <main className="app-layout__content" id="main-content">
+        {children}
+      </main>
 
       <AppFooter />
     </div>

@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
+
 import './AppFooter.css'
 
-// Ported from the Angular AppFooterComponent. The docs CTA is a plain link for
-// now; the Angular scroll-to-top/focus behavior depends on the docs page and
-// will be reconnected when docs are migrated. The footer is currently always
-// rendered; Angular hid it on `/register`, which returns with routing.
+// Ported from the Angular AppFooterComponent. The docs CTA routes to /docs; the
+// Angular scroll-to-top/focus behavior depends on the docs page and will be
+// reconnected when docs are migrated. The footer is currently always rendered;
+// Angular hid it on `/register`, which returns when the route guard lands.
 export function AppFooter() {
   return (
     <footer className="app-footer">
@@ -20,9 +22,9 @@ export function AppFooter() {
             checking in, managing reservations, and understanding recent
             changes.
           </p>
-          <a className="app-footer__cta" href="/docs">
+          <Link className="app-footer__cta" to="/docs">
             User Guide
-          </a>
+          </Link>
         </div>
       </section>
 

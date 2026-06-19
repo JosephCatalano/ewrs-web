@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 import { canAccess } from '../auth/roles'
 import { getUserRoleIds, useCurrentUser } from '../auth/useCurrentUser'
@@ -45,16 +46,6 @@ const NAV_ITEMS: readonly NavItem[] = [
   },
   { label: 'Extract report', href: '/reports', isVisible: canAccess.reports },
 ]
-
-function isActivePath(href: string): boolean {
-  if (typeof window === 'undefined') {
-    return false
-  }
-
-  const path = window.location.pathname
-
-  return path === href || path.startsWith(`${href}/`)
-}
 
 export function AppHeader() {
   const { preference, setSystemTheme, setLightTheme, setDarkTheme } = useTheme()
@@ -136,16 +127,16 @@ export function AppHeader() {
 
           {isAccountMenuOpen ? (
             <div className="app-menu" id={menuId} role="menu">
-              <a
+              <Link
                 className="app-menu__item"
-                href="/edit-profile"
                 role="menuitem"
+                to="/edit-profile"
               >
                 Settings
-              </a>
-              <a className="app-menu__item" href="/docs" role="menuitem">
+              </Link>
+              <Link className="app-menu__item" role="menuitem" to="/docs">
                 User Guide
-              </a>
+              </Link>
 
               <div aria-label="Theme" className="app-menu__group" role="group">
                 <p className="app-menu__group-label">Theme</p>
@@ -185,14 +176,9 @@ export function AppHeader() {
       {visibleNavItems.length > 0 ? (
         <nav aria-label="Primary" className="app-nav">
           {visibleNavItems.map((item) => (
-            <a
-              aria-current={isActivePath(item.href) ? 'page' : undefined}
-              className="app-nav__link"
-              href={item.href}
-              key={item.label}
-            >
+            <NavLink className="app-nav__link" key={item.label} to={item.href}>
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
       ) : null}
