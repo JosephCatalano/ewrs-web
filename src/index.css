@@ -1,49 +1,17 @@
-:root {
-  --color-page: #f7f9fc;
-  --color-text: #172033;
-  --color-heading: #0b1f3a;
-  --color-muted: #58667a;
+@import './styles/tokens.css';
 
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+:root {
+  font-family: var(--ewrs-font-body);
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: 0;
   color-scheme: light;
-  color: var(--color-text);
-  background: var(--color-page);
+  color: var(--ewrs-text-primary);
+  background: var(--ewrs-background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-:root.theme-light {
-  --color-page: #f7f9fc;
-  --color-text: #172033;
-  --color-heading: #0b1f3a;
-  --color-muted: #58667a;
-
-  color-scheme: light;
-}
-
-:root.theme-dark {
-  --color-page: #101418;
-  --color-text: #e7edf5;
-  --color-heading: #ffffff;
-  --color-muted: #a7b3c2;
-
-  color-scheme: dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.theme-light):not(.theme-dark) {
-    --color-page: #101418;
-    --color-text: #e7edf5;
-    --color-heading: #ffffff;
-    --color-muted: #a7b3c2;
-
-    color-scheme: dark;
-  }
 }
 
 * {
@@ -52,6 +20,23 @@
 
 body {
   margin: 0;
+  color: var(--ewrs-text-primary);
+  background: var(--ewrs-background);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: var(--ewrs-link);
+}
+
+a:hover {
+  color: var(--ewrs-link-hover);
 }
 
 #root {
@@ -60,9 +45,20 @@ body {
 
 h1 {
   margin: 0 0 16px;
-  color: var(--color-heading);
+  color: var(--ewrs-text-primary);
+  font-family: var(--ewrs-font-heading);
   font-size: 4rem;
   line-height: 1.05;
+}
+
+::selection {
+  background: var(--ewrs-focus);
+  color: var(--ewrs-text-on-color);
+}
+
+:focus-visible {
+  outline: 4px solid var(--ewrs-focus);
+  outline-offset: 2px;
 }
 
 @media (max-width: 640px) {

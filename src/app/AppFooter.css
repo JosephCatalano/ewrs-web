@@ -1,0 +1,167 @@
+/*
+ * Two-tier footer ported from Angular. It is intentionally dark in both light
+ * and dark mode (treated as branded chrome), so the colors here are literal
+ * rather than themed tokens.
+ */
+.app-footer {
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: 3rem;
+  color: var(--ewrs-ods-system-white);
+  font-family: var(--ewrs-font-body);
+}
+
+.app-footer__help {
+  background-color: #393939;
+}
+
+.app-footer__help-inner {
+  margin: 0 auto;
+  padding: 40px 48px;
+}
+
+.app-footer__heading {
+  margin: 0 0 12px;
+  color: var(--ewrs-ods-system-white);
+  font-family: var(--ewrs-font-heading);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.app-footer__desc {
+  max-width: 640px;
+  margin: 0 0 24px;
+  color: var(--ewrs-ods-system-white);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.app-footer__cta {
+  display: inline-flex;
+  min-width: 160px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 1.5px solid var(--ewrs-ods-system-white);
+  border-radius: 2px;
+  background-color: transparent;
+  color: var(--ewrs-ods-system-white);
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.app-footer__cta:hover,
+.app-footer__cta:focus-visible {
+  background-color: rgb(255 255 255 / 8%);
+  color: var(--ewrs-ods-system-white);
+  text-decoration: none;
+  outline: none;
+}
+
+.app-footer__cta:focus-visible {
+  box-shadow: 0 0 0 3px rgb(255 255 255 / 35%);
+}
+
+.app-footer__cta:active {
+  background-color: rgb(255 255 255 / 16%);
+}
+
+.app-footer__legal {
+  background-color: #1a1a1a;
+}
+
+.app-footer__legal-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto;
+  padding: 24px 48px;
+}
+
+.app-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-footer__nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.app-footer__nav a,
+.app-footer__copyright {
+  color: var(--ewrs-ods-system-white);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.app-footer__nav a:hover,
+.app-footer__nav a:focus-visible,
+.app-footer__copyright:hover,
+.app-footer__copyright:focus-visible {
+  color: var(--ewrs-ods-system-white);
+  text-decoration: underline;
+  opacity: 0.85;
+  outline: none;
+}
+
+.app-footer__nav a:focus-visible,
+.app-footer__copyright:focus-visible {
+  border-radius: 2px;
+  box-shadow: 0 0 0 3px rgb(255 255 255 / 35%);
+}
+
+.app-footer__copyright {
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .app-footer__help-inner {
+    padding: 32px 24px;
+  }
+
+  .app-footer__legal-inner {
+    padding: 20px 24px;
+  }
+
+  .app-footer__heading {
+    font-size: 1.25rem;
+  }
+
+  .app-footer__nav {
+    gap: 20px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-footer__help-inner {
+    padding: 28px 20px;
+  }
+
+  .app-footer__legal-inner {
+    padding: 20px;
+  }
+
+  .app-footer__cta {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .app-footer__nav {
+    gap: 16px 20px;
+  }
+}

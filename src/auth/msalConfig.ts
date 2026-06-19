@@ -2,6 +2,7 @@ import {
   BrowserCacheLocation,
   LogLevel,
   PublicClientApplication,
+  type AccountInfo,
   type Configuration,
   type RedirectRequest,
   type SilentRequest,
@@ -81,6 +82,13 @@ export function getMsalInstance(): PublicClientApplication {
   cachedMsalInstance ??= new PublicClientApplication(getMsalConfiguration())
 
   return cachedMsalInstance
+}
+
+// Reads the active account without constructing MSAL. Used by render-time
+// auth checks (e.g. useCurrentUser) so they cannot trigger MSAL setup or
+// network work before the provider has initialized the instance.
+export function getActiveAccountIfReady(): AccountInfo | null {
+  return cachedMsalInstance?.getActiveAccount() ?? null
 }
 
 export function getLoginRequest(): RedirectRequest {

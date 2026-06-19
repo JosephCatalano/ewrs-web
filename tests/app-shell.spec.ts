@@ -9,3 +9,12 @@ test('renders the migration shell', async ({ page }) => {
 
   await expect(page.getByText(/ewrs react migration/i)).toBeVisible()
 })
+
+test('renders the compact mobile header', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 640 })
+  await page.goto('/')
+
+  await expect(page.locator('.app-header__title--compact')).toBeVisible()
+  await expect(page.locator('.app-header__actions')).toBeVisible()
+  await expect(page.getByRole('link', { name: /home/i })).toBeVisible()
+})

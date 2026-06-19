@@ -9,7 +9,11 @@ function App() {
       <LoaderOverlay />
       <AlertHost />
       <AppShell>
-        <main className="app-shell" aria-labelledby="app-title">
+        <main
+          id="main-content"
+          className="app-shell"
+          aria-labelledby="app-title"
+        >
           <div className="app-shell__content">
             <p className="app-shell__eyebrow">EWRS React migration</p>
             <h1 id="app-title">React shell ready</h1>

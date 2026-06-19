@@ -1,0 +1,296 @@
+.app-header {
+  flex-shrink: 0;
+  background-color: var(--ewrs-shell-header-bg);
+  color: var(--ewrs-text-on-color);
+}
+
+.app-header__bar {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 160px;
+}
+
+.app-header__logo-frame {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.app-header__logo {
+  display: block;
+  width: auto;
+  height: 26px;
+  object-fit: contain;
+}
+
+.app-header__title {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  color: var(--ewrs-text-on-color);
+  font-family: var(--ewrs-font-heading);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-header__title--compact {
+  display: none;
+}
+
+/* Account control + dropdown menu */
+.app-header__account {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.app-header__account-button {
+  display: inline-flex;
+  max-width: min(45vw, 480px);
+  align-items: center;
+  gap: 6px;
+  padding: 8px 8px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ewrs-text-on-color);
+  cursor: pointer;
+  font-family: var(--ewrs-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.app-header__account-button:hover {
+  background-color: rgb(255 255 255 / 12%);
+}
+
+.app-header__account-button:focus-visible {
+  outline: 3px solid var(--ewrs-focus);
+  outline-offset: 2px;
+}
+
+.app-header__account-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Ontario SVG icons recolored to white through the header text color. */
+.app-header__icon {
+  flex: 0 0 auto;
+  display: inline-block;
+  background-color: var(--ewrs-text-on-color);
+}
+
+.app-header__icon--account {
+  width: 24px;
+  height: 24px;
+  mask: url('/assets/ontario-design-system/icons/svg/ontario-icon-account.svg')
+    center / contain no-repeat;
+  -webkit-mask: url('/assets/ontario-design-system/icons/svg/ontario-icon-account.svg')
+    center / contain no-repeat;
+}
+
+.app-header__icon--chevron {
+  width: 16px;
+  height: 16px;
+  mask: url('/assets/ontario-design-system/icons/svg/ontario-icon-chevron-down.svg')
+    center / contain no-repeat;
+  -webkit-mask: url('/assets/ontario-design-system/icons/svg/ontario-icon-chevron-down.svg')
+    center / contain no-repeat;
+}
+
+.app-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 1200;
+  min-width: 220px;
+  padding: 8px 0;
+  border: 1px solid var(--ewrs-border-subtle);
+  border-radius: 4px;
+  background-color: var(--ewrs-menu-bg);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 24%);
+}
+
+.app-menu__item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: var(--ewrs-text-primary);
+  cursor: pointer;
+  font-family: var(--ewrs-font-body);
+  font-size: 0.9375rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+.app-menu__item:hover,
+.app-menu__item:focus-visible {
+  background-color: var(--ewrs-menu-hover-bg);
+  color: var(--ewrs-text-primary);
+  outline: none;
+}
+
+.app-menu__item:focus-visible {
+  outline: 2px solid var(--ewrs-focus);
+  outline-offset: -2px;
+}
+
+.app-menu__item[aria-checked='true']::after {
+  margin-left: auto;
+  content: '✓';
+}
+
+.app-menu__group {
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--ewrs-border-subtle);
+}
+
+.app-menu__group-label {
+  margin: 0;
+  padding: 6px 16px;
+  color: var(--ewrs-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Secondary navigation bar */
+.app-nav {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  gap: 16px;
+  padding: 0 160px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: var(--ewrs-shell-nav-bg);
+  color: var(--ewrs-shell-nav-text);
+}
+
+.app-nav__link {
+  display: inline-flex;
+  height: 36px;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0 12px;
+  border-bottom: 2px solid transparent;
+  color: var(--ewrs-shell-nav-text);
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.app-nav__link:visited,
+.app-nav__link:hover,
+.app-nav__link:active {
+  color: var(--ewrs-shell-nav-text);
+}
+
+.app-nav__link:hover {
+  background-color: rgb(255 255 255 / 12%);
+}
+
+.app-nav__link:focus-visible {
+  outline: 3px solid var(--ewrs-focus);
+  outline-offset: -3px;
+}
+
+.app-nav__link[aria-current='page'] {
+  border-bottom-color: var(--ewrs-text-on-color);
+}
+
+@media only screen and (max-width: 769px) {
+  .app-header__bar {
+    display: grid;
+    min-height: 53px;
+    grid-template-columns: 32px 1fr auto;
+    gap: 12px;
+    padding: 8px 16px;
+  }
+
+  /*
+   * On mobile the full Ontario wordmark is too wide, so the 32px frame clips
+   * the logo and the negative translate shifts it left to expose only the
+   * trillium mark at the right edge. Keep the frame width and translate offset
+   * in sync if the logo asset's aspect ratio changes.
+   */
+  .app-header__logo-frame {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    justify-self: start;
+  }
+
+  .app-header__logo {
+    max-width: none;
+    height: 32px;
+    transform: translateX(calc(-100% + 32px));
+  }
+
+  .app-header__title {
+    justify-self: center;
+    font-family: var(--ewrs-font-body);
+    font-size: 1rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .app-header__title--full {
+    display: none;
+  }
+
+  .app-header__title--compact {
+    display: block;
+  }
+
+  .app-header__account-name {
+    display: none;
+  }
+
+  .app-nav {
+    min-height: 56px;
+    padding: 0 16px;
+  }
+
+  .app-nav__link {
+    font-size: 0.9375rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1130px) {
+  .app-header__bar {
+    padding: 12px 32px;
+  }
+
+  .app-header__title {
+    font-size: 1.125rem;
+  }
+
+  .app-nav {
+    min-height: 56px;
+    padding: 0 32px;
+    gap: 8px;
+  }
+}
+
+@media only screen and (min-width: 1130px) and (max-width: 1230px) {
+  .app-header__bar {
+    padding: 12px 64px;
+  }
+
+  .app-nav {
+    padding: 0 64px;
+  }
+}

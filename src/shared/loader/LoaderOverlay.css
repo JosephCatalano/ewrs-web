@@ -22,7 +22,7 @@
   position: absolute;
   inset: 0;
   display: block;
-  background: rgb(205 0 0 / 16%);
+  background: var(--ewrs-loader-track);
 }
 
 .loader-overlay__bar {
@@ -31,7 +31,7 @@
   bottom: 0;
   left: -40%;
   width: 40%;
-  background: #cd0000;
+  background: var(--ewrs-support-error);
   animation: loader-overlay-slide 1.2s ease-in-out infinite;
 }
 

@@ -6,7 +6,7 @@ This is the Vite React migration workspace for moving EWRS from Angular to React
 
 - Vite React TypeScript app initialized.
 - Strict TypeScript enabled.
-- App shell moved under `src/app`.
+- App shell moved under `src/app`: `AppShell` composes `AppHeader` (responsive logo/title, account menu with working theme controls, role-gated primary nav) and `AppFooter` (two-tier EWRS footer). Header and footer are shell-only chrome, so they live beside `AppShell` rather than in `src/shared/components`.
 - Initial migration folders created under `src/api`, `src/auth`, `src/features`, and `src/shared`.
 - Public environment contract added in `.env.example`.
 - Local developer override file added in `.env.local`.
@@ -30,8 +30,11 @@ This is the Vite React migration workspace for moving EWRS from Angular to React
 - Shared alert provider and host added under `src/shared/alerts`, wired through `AppProviders` and `App`, with Figma-aligned Ontario page alert styling, target-aware rendering, explicit close behavior, and text-only message output.
 - Shared loader provider and top progress overlay added under `src/shared/loader`, wired through `AppProviders` and `App`, with manual loader controls plus automatic TanStack Query fetch/mutation activity detection.
 - Shared theme provider added under `src/shared/theme`, wired through `AppProviders`, with `system`/`light`/`dark` preference support, legacy `darkMode` migration, persisted `themePreference`, and root/body theme classes.
+- Shared CSS theme tokens added under `src/styles/tokens.css`; light mode is sourced from the Ontario Design System UI prototyping kit colour page, and dark mode uses Carbon Gray 90 neutral surfaces only where ODS does not define a dark equivalent while preserving Ontario blue action/focus colors.
+- Role constants and nav authorization helpers added under `src/auth/roles.ts`, preserving the exact Angular numeric role IDs and `authorize*` visibility rules.
+- `useCurrentUser` hook added under `src/auth/useCurrentUser.ts`, loading `GET /api/User/me` through the shared API client and TanStack Query; the header reads it to gate primary nav by role.
 
-Not implemented yet: routing, feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
+Not implemented yet: routing (nav uses plain anchors until React Router is added), sign in/out and MSAL account-name wiring in the header, the Active-status/`/register` redirect (needs the Angular `userStatus.const` values), feature API hooks, and real CI pipeline updates. Storybook still needs Phase 2 work: global decorators (theme/router/query/alerts), auth mocks, the a11y and docs addons, and the Azure Static Web Apps deployment.
 
 ## Environment Files
 
